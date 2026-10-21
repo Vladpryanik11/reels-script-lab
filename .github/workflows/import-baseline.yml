@@ -1,0 +1,33 @@
+name: Import verified baseline
+on:
+  push:
+    branches: ['import/v0.8.2-baseline']
+    paths: ['baseline/v0.8.2-source.zip']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import exact archive contents
+        run: python scripts/import_baseline.py baseline/v0.8.2-source.zip
+      - name: Check every source file and protected checksum
+        run: python scripts/verify_baseline.py --strict
+      - name: Run baseline tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -q
+      - name: Commit verified sources to import branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs fixtures reels-script-lab tests
+          if ! git diff --cached --quiet; then
+            git commit -m "import: restore verified v0.8.2 workspace without changes"
+            git push
+          fi
