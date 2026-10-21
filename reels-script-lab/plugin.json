@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "reels-script-lab",
+  "version": "0.8.2",
+  "description": "Universal short-video scripts with independently sourced hook formulas and real-language editing (skills only; prototype).",
+  "author": {
+    "name": "Reels Script Lab"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Reels Script Lab",
+        "shortDescription": "Сценарии Reels для любой ниши",
+        "longDescription": "Универсальный конвейер: формулы хуков по материалам пользователя, отдельный редактор живого русского языка по доступным постам и комментариям, сценарные агенты и двойное ревью. Не автономный сервис.",
+        "developerName": "Reels Script Lab",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": "Создай три разных сценария Reels: сначала выбери формулы хуков из моей учебной базы, проверь силу хуков, а затем отдельно редактируй их языком Human Language Agent по доступным русским текстам. После правки ещё раз проверь формулу и интригу."
+      }
+    }
+  }
+}

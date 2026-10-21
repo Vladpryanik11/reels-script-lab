@@ -1,0 +1,219 @@
+{
+  "contract_version": "0.7.0",
+  "brief": {
+    "topic": "Непропорциональная упаковка",
+    "audience": "покупатели",
+    "industry": "retail",
+    "goal": "discussion",
+    "duration_sec": 30,
+    "profile": "universal"
+  },
+  "voice": {
+    "status": "SOURCE_INSUFFICIENT",
+    "real_world_provenance_attested": false
+  },
+  "facts": {
+    "mode": "CREATIVE_NO_FACT_CLAIMS",
+    "claims": [],
+    "rationale": "Сюжет — личное впечатление без проверяемых чисел"
+  },
+  "branches": [
+    {
+      "id": "A",
+      "angle": "A: смотрим на упаковку с другой стороны",
+      "hook": {
+        "text": "Вариант A: вы открыли коробку, а внутри лежит совсем не то, что ожидали?",
+        "locked_sha256": "844dcfd9e3f1a0dab7e03bb48295651aa9526c2f820b37e31611afc2dd07b55d"
+      },
+      "structure": {
+        "name": "Один объект → история",
+        "beats": [
+          "HOOK",
+          "DEVELOPMENT",
+          "REHOOK",
+          "PAYOFF",
+          "CTA"
+        ],
+        "structure_id": "SRC-04",
+        "methodology_source_id": "SMMPLANNER-7-STRUCTURES",
+        "fit_reason": "Выбранный учебный сюжет позволяет показать конфликт без неподтверждённых цифр",
+        "excluded_structures": [
+          "SRC-03"
+        ],
+        "case_kind": "illustrative",
+        "narrative_route": "Предмет проходит через три смысловые сцены",
+        "reveal_map": {
+          "before_rehook": "Коробка кажется большой",
+          "withheld": "Размер предмета не очевиден",
+          "at_payoff": "Честный показ масштаба"
+        },
+        "object_anchor": {
+          "object": "коробка",
+          "appearances": [
+            "HOOK",
+            "DEVELOPMENT",
+            "PAYOFF"
+          ]
+        }
+      },
+      "rehook": {
+        "text": "А что вы заметите, если посмотреть на упаковку вторым взглядом — версия A?",
+        "viewer_question": "Как заметить подвох — вариант A?",
+        "payoff_line_index": 3,
+        "technique_id": "TR-05",
+        "methodology_source_id": "TATAM-HOOK-REHOOK",
+        "specific_pivot": "Несовпадение видимого и ожидания",
+        "next_beat": "Показать предмет и коробку одновременно"
+      },
+      "script": {
+        "lines": [
+          "Вариант A: вы открыли коробку, а внутри лежит совсем не то, что ожидали?",
+          "Смотрите на деталь: коробка внушительная, а сам предмет помещается на ладони.",
+          "А что вы заметите, если посмотреть на упаковку вторым взглядом — версия A?",
+          "На коробке изображён крупный предмет, но масштаб фотографии ничем не обозначен.",
+          "Расскажите, случалось ли с вами подобное — версия A."
+        ]
+      },
+      "cta": {
+        "text": "Расскажите, случалось ли с вами подобное — версия A."
+      },
+      "reviews": {
+        "hook": "NOT_RUN",
+        "structure": "NOT_RUN",
+        "rehook": "NOT_RUN",
+        "script": "NOT_RUN",
+        "cta": "NOT_RUN",
+        "final": "NOT_RUN"
+      }
+    },
+    {
+      "id": "B",
+      "angle": "B: смотрим на упаковку с другой стороны",
+      "hook": {
+        "text": "Вариант B: вы открыли коробку, а внутри лежит совсем не то, что ожидали?",
+        "locked_sha256": "93a10e7ce14952bc68c6429334e2c9089ffc7343d799ab494f325e9800ed7b40"
+      },
+      "structure": {
+        "name": "Ошибочный прогноз → неочевидное решение",
+        "beats": [
+          "HOOK",
+          "DEVELOPMENT",
+          "REHOOK",
+          "PAYOFF",
+          "CTA"
+        ],
+        "structure_id": "SRC-02",
+        "methodology_source_id": "SMMPLANNER-7-STRUCTURES",
+        "fit_reason": "Выбранный учебный сюжет позволяет показать конфликт без неподтверждённых цифр",
+        "excluded_structures": [
+          "SRC-03"
+        ],
+        "case_kind": "illustrative",
+        "narrative_route": "Ожидание размера меняется после проверки",
+        "reveal_map": {
+          "before_rehook": "Коробка кажется большой",
+          "withheld": "Размер предмета не очевиден",
+          "at_payoff": "Честный показ масштаба"
+        },
+        "expectation_reversal": {
+          "expected": "Большая упаковка = большой предмет",
+          "supported_alternative": "Фото на упаковке без масштаба не определяет размер"
+        }
+      },
+      "rehook": {
+        "text": "А что вы заметите, если посмотреть на упаковку вторым взглядом — версия B?",
+        "viewer_question": "Как заметить подвох — вариант B?",
+        "payoff_line_index": 3,
+        "technique_id": "TR-02",
+        "methodology_source_id": "TATAM-HOOK-REHOOK",
+        "specific_pivot": "Несовпадение видимого и ожидания",
+        "next_beat": "Показать предмет и коробку одновременно"
+      },
+      "script": {
+        "lines": [
+          "Вариант B: вы открыли коробку, а внутри лежит совсем не то, что ожидали?",
+          "Смотрите на деталь: коробка внушительная, а сам предмет помещается на ладони.",
+          "А что вы заметите, если посмотреть на упаковку вторым взглядом — версия B?",
+          "На коробке изображён крупный предмет, но масштаб фотографии ничем не обозначен.",
+          "Расскажите, случалось ли с вами подобное — версия B."
+        ]
+      },
+      "cta": {
+        "text": "Расскажите, случалось ли с вами подобное — версия B."
+      },
+      "reviews": {
+        "hook": "NOT_RUN",
+        "structure": "NOT_RUN",
+        "rehook": "NOT_RUN",
+        "script": "NOT_RUN",
+        "cta": "NOT_RUN",
+        "final": "NOT_RUN"
+      }
+    },
+    {
+      "id": "C",
+      "angle": "C: смотрим на упаковку с другой стороны",
+      "hook": {
+        "text": "Вариант C: вы открыли коробку, а внутри лежит совсем не то, что ожидали?",
+        "locked_sha256": "87e29448bb2b893ac218c6a8d416409ce8179a852b19d2e5c2f187fbc1db90dd"
+      },
+      "structure": {
+        "name": "Обратная инструкция",
+        "beats": [
+          "HOOK",
+          "DEVELOPMENT",
+          "REHOOK",
+          "PAYOFF",
+          "CTA"
+        ],
+        "structure_id": "SRC-05",
+        "methodology_source_id": "SMMPLANNER-7-STRUCTURES",
+        "fit_reason": "Выбранный учебный сюжет позволяет показать конфликт без неподтверждённых цифр",
+        "excluded_structures": [
+          "SRC-03"
+        ],
+        "case_kind": "illustrative",
+        "narrative_route": "Иронично показываем ошибочный способ выбора",
+        "reveal_map": {
+          "before_rehook": "Коробка кажется большой",
+          "withheld": "Размер предмета не очевиден",
+          "at_payoff": "Честный показ масштаба"
+        },
+        "irony_context": "Подчёркнуто ироническая инструкция не проверять размер перед покупкой"
+      },
+      "rehook": {
+        "text": "А что вы заметите, если посмотреть на упаковку вторым взглядом — версия C?",
+        "viewer_question": "Как заметить подвох — вариант C?",
+        "payoff_line_index": 3,
+        "technique_id": "TR-03",
+        "methodology_source_id": "TATAM-HOOK-REHOOK",
+        "specific_pivot": "Несовпадение видимого и ожидания",
+        "next_beat": "Показать предмет и коробку одновременно"
+      },
+      "script": {
+        "lines": [
+          "Вариант C: вы открыли коробку, а внутри лежит совсем не то, что ожидали?",
+          "Смотрите на деталь: коробка внушительная, а сам предмет помещается на ладони.",
+          "А что вы заметите, если посмотреть на упаковку вторым взглядом — версия C?",
+          "На коробке изображён крупный предмет, но масштаб фотографии ничем не обозначен.",
+          "Расскажите, случалось ли с вами подобное — версия C."
+        ]
+      },
+      "cta": {
+        "text": "Расскажите, случалось ли с вами подобное — версия C."
+      },
+      "reviews": {
+        "hook": "NOT_RUN",
+        "structure": "NOT_RUN",
+        "rehook": "NOT_RUN",
+        "script": "NOT_RUN",
+        "cta": "NOT_RUN",
+        "final": "NOT_RUN"
+      }
+    }
+  ],
+  "review_runtime": {
+    "independent_agents_ran": false,
+    "external_human_scores": false
+  }
+}
