@@ -1,0 +1,7 @@
+[
+  {"industry":"saas","topic":"Почему команда не заполняет поля CRM","audience":"руководители небольших отделов продаж и CRM-администраторы","goal":"discussion","evidence_mode":"CREATIVE_NO_FACT_CLAIMS"},
+  {"industry":"local-service","topic":"Что клиенту стоит проверить перед ремонтом одежды в ателье","audience":"люди, которые впервые несут костюм в ателье","goal":"save","evidence_mode":"CREATIVE_NO_FACT_CLAIMS"},
+  {"industry":"culture","topic":"Как не потеряться в программе независимого кинофестиваля","audience":"зрители локальных фестивалей короткометражного кино","goal":"attendance","evidence_mode":"SOURCE_CHECK_REQUIRED"},
+  {"industry":"product","topic":"Кофемолка дома: на что обращать внимание при выборе","audience":"начинающие любители домашнего кофе","goal":"save","evidence_mode":"CREATIVE_NO_FACT_CLAIMS"},
+  {"industry":"education","topic":"Что делать на первом уроке игры на фортепиано","audience":"взрослые новички без музыкального образования","goal":"follow","evidence_mode":"CREATIVE_NO_FACT_CLAIMS"}
+]

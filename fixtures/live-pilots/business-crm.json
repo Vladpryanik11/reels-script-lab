@@ -1,0 +1,157 @@
+{
+  "contract_version": "0.8.0",
+  "brief": {
+    "topic": "CRM после покупки: что оказалось труднее, чем на демо",
+    "audience": "владельцы малого бизнеса и руководители отделов продаж",
+    "industry": "business_software",
+    "goal": "показать реальную сложность внедрения"
+  },
+  "sources": [
+    {
+      "id": "CRM1",
+      "url": "https://habr.com/ru/articles/564764/comments/",
+      "platform": "habr",
+      "access": "FULL_PAGE_OPENED",
+      "capture_ref": "turn239664view0",
+      "captured_at": "2026-10-20T19:00:00+00:00",
+      "source_kind": "discussion"
+    },
+    {
+      "id": "CRM2",
+      "url": "https://habr.com/ru/articles/564764/",
+      "platform": "habr",
+      "access": "FULL_PAGE_OPENED",
+      "capture_ref": "turn680184view0",
+      "captured_at": "2026-10-20T19:00:00+00:00",
+      "source_kind": "article"
+    }
+  ],
+  "observations": [
+    {
+      "id": "crm_a",
+      "source_id": "CRM1",
+      "speaker_id": "mrsu_smirnov",
+      "kind": "user_comment",
+      "situation": "Пользователь рассказывает, что радуется выбору другого инструмента после чтения историй о сложном внедрении CRM.",
+      "voice_signal": "ирония и сравнение собственного выбора",
+      "audience_fit": "потенциальный пользователь в обсуждении"
+    },
+    {
+      "id": "crm_b",
+      "source_id": "CRM1",
+      "speaker_id": "Ramapriya",
+      "kind": "user_comment",
+      "situation": "В комментарии обсуждают, что часть ограничений решается доработками коробочной версии и собственными отчетами.",
+      "voice_signal": "необходимость уточнить конфигурацию системы",
+      "audience_fit": "потенциальный пользователь в обсуждении"
+    },
+    {
+      "id": "crm_c",
+      "source_id": "CRM1",
+      "speaker_id": "gorbachov",
+      "kind": "user_comment",
+      "situation": "Автор рассказывает, что отчеты пришлось формировать в таблицах после выгрузки данных через API.",
+      "voice_signal": "ожидание готового отчёта не совпало с практикой",
+      "audience_fit": "потенциальный пользователь в обсуждении"
+    },
+    {
+      "id": "crm_d",
+      "source_id": "CRM1",
+      "speaker_id": "Dee3",
+      "kind": "user_comment",
+      "situation": "В обсуждении участник коротко спрашивает, какой инструмент выбрали вместо прежней CRM.",
+      "voice_signal": "короткий практичный вопрос без терминов",
+      "audience_fit": "потенциальный пользователь в обсуждении"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "A",
+      "anchor_ids": [
+        "crm_c"
+      ],
+      "angle": "отчёты после внедрения",
+      "hook": "CRM уже стоит. А отчёты по продажам всё равно собираете в таблице?",
+      "edits": [
+        {
+          "actor": "writer",
+          "text": "В CRM есть одна большая проблема, о которой мало кто говорит."
+        },
+        {
+          "actor": "editor",
+          "decision": "REJECT",
+          "reason": "Общий заголовок без конкретного опыта, неясно, в чём конфликт."
+        },
+        {
+          "actor": "writer",
+          "text": "CRM уже стоит. А отчёты по продажам всё равно собираете в таблице?"
+        },
+        {
+          "actor": "editor",
+          "decision": "SELF_REVIEW_ONLY",
+          "reason": "Есть проверяемая сцена; нельзя заявлять, что такое происходит со всеми CRM."
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "anchor_ids": [
+        "crm_b"
+      ],
+      "angle": "доработка вместо коробки",
+      "hook": "Вам говорят: «Это можно доработать». А сколько потом придётся доделывать?",
+      "edits": [
+        {
+          "actor": "writer",
+          "text": "У внедрения CRM есть скрытая цена."
+        },
+        {
+          "actor": "editor",
+          "decision": "REJECT",
+          "reason": "Не конкретная ситуация, эмоционально пустой шаблон с обещанием тайны."
+        },
+        {
+          "actor": "writer",
+          "text": "Вам говорят: «Это можно доработать». А сколько потом придётся доделывать?"
+        },
+        {
+          "actor": "editor",
+          "decision": "SELF_REVIEW_ONLY",
+          "reason": "Поворот конкретнее, но вопрос ещё чуть канцелярский; отправить на устное тестирование."
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "anchor_ids": [
+        "crm_a",
+        "crm_d"
+      ],
+      "angle": "выбор между системами",
+      "hook": "Вы уже выбрали CRM. А вам советуют вообще другую?",
+      "edits": [
+        {
+          "actor": "writer",
+          "text": "Какую CRM систему лучше выбрать для бизнеса?"
+        },
+        {
+          "actor": "editor",
+          "decision": "REJECT",
+          "reason": "Поисковый заголовок, а не человеческая ситуация; нет источника интриги."
+        },
+        {
+          "actor": "writer",
+          "text": "Вы уже выбрали CRM. А вам советуют вообще другую?"
+        },
+        {
+          "actor": "editor",
+          "decision": "SELF_REVIEW_ONLY",
+          "reason": "Без придуманной длительности; проверить, не перетянут ли спор из одного комментариия."
+        }
+      ]
+    }
+  ],
+  "editorial_review": "SELF_REVIEW_ONLY",
+  "autonomous_agents_verified": false,
+  "source_diversity_note": "Один кейс одной компании и комментарии; нельзя выдавать за рыночный тренд."
+}

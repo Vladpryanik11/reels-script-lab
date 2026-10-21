@@ -1,0 +1,1 @@
+Reels Script Lab v0.8.1 — разделены Hook Formula Agent и Human Language Agent. Изолированные источники, двойное ревью после языковой редактуры. Skills-only preview; автономных агентов и живой интеграции нет.

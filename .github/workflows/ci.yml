@@ -1,0 +1,59 @@
+name: Validate Reels Script Lab
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify all 75 source files and protected source hashes
+        run: python scripts/verify_baseline.py --strict
+      - name: Run portable source tests (84 of 89)
+        run: |
+          python - <<'PY'
+          import sys
+          import unittest
+
+          suite = unittest.defaultTestLoader.discover('tests', pattern='test_*.py')
+          def flatten(group):
+              for item in group:
+                  if isinstance(item, unittest.TestSuite):
+                      yield from flatten(item)
+                  else:
+                      yield item
+
+          all_tests = list(flatten(suite))
+          def needs_local_release_archive(test):
+              name = test.id()
+              return (
+                  name.startswith((
+                      'test_release_archive.',
+                      'test_release_archive_v08.',
+                      'test_release_archive_v081.',
+                  ))
+                  or name.endswith((
+                      '.test_old_release_untouched',
+                      '.test_version_archive_and_all_restored_references',
+                  ))
+              )
+
+          portable = [t for t in all_tests if not needs_local_release_archive(t)]
+          excluded = len(all_tests) - len(portable)
+          print(
+              f'CI coverage: {len(portable)} portable tests; '
+              f'{excluded} tests depend on local /mnt/data release ZIPs.',
+              flush=True,
+          )
+          if len(all_tests) != 89 or len(portable) != 84 or excluded != 5:
+              raise SystemExit('Unexpected test inventory; review CI exclusions')
+          result = unittest.TextTestRunner(verbosity=1).run(
+              unittest.TestSuite(portable)
+          )
+          sys.exit(0 if result.wasSuccessful() else 1)
+          PY
